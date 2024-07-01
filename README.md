@@ -23,7 +23,7 @@ This project implements a Node.js backend API using Express for routing and Mong
 
  - Clone this repository
  - Install dependencies: Check package.json for installation
- - Create a .env file in the project root directory and set any necessary environment variables (e.g., database connection string).
+ - Create a .env file in the project root directory and set any necessary environment variables (e.g., port, database connection string).
  - Start the server: npm start (or a custom script defined in package.json)
 
 # Testing
