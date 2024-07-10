@@ -28,7 +28,7 @@ async function startServer() {
 
   // Start listening for incoming requests on the specified port
   server.listen(PORT, () => {
-    console.log(`Listening On Port ${PORT}...`);
+    console.log(`Listening on port ${PORT}...`);
   });
 }
 
