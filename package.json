@@ -1,11 +1,12 @@
 {
-  "name": "nasa_project",
+  "name": "space_launch",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "install-server": "npm install --prefix server",
     "install-client": "npm install --prefix client",
-    "install-all": "npm-run-all install-server install-client",
+    "preinstall": "npm install npm-run-all --save-dev",
+    "install": "npm-run-all install-server install-client",
     "server": "npm run start --prefix server",
     "client": "npm run start --prefix client",
     "start": "npm-run-all --parallel server client",
@@ -18,10 +19,9 @@
     "test-client": "npm run test --prefix client",
     "test": "npm-run-all --parallel test-server test-client"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Nahasat Nibir",
   "license": "ISC",
-  "description": "",
+  "description": "This project implements a Node.js backend API using Express for routing and Mongoose for interacting with a MongoDB database. It demonstrates best practices for modularity, data handling, and error management. React.js for frontend.",
   "devDependencies": {
     "npm-run-all": "^4.1.5"
   }
