@@ -13,7 +13,7 @@ jobs:
   build:
     env:
       CI: true
-      MONGO_URL: ${{ secrets.MONGO_URL }}  # Access secret using ${{ secrets.NAME }}
+      MONGO_URL: mongodb+srv://nasa-api:NhG0Sgrw3olvybe7@nasacluster.esiyint.mongodb.net/?retryWrites=true&w=majority&appName=NASACluster
     runs-on: ubuntu-latest
 
     strategy:
@@ -34,7 +34,7 @@ jobs:
 
       - name: Run Tests
         env:  # Define environment variables for tests
-          MONGO_URL: ${{ secrets.MONGO_URL }}
+          MONGO_URL: mongodb+srv://nasa-api:NhG0Sgrw3olvybe7@nasacluster.esiyint.mongodb.net/?retryWrites=true&w=majority&appName=NASACluster
         run: npm run test  # Run tests using the MONGO_URL secret
 
 
