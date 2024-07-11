@@ -13,7 +13,7 @@ jobs:
   build:
     env:
       CI: true
-      MONGO_URL: mongodb://${{ secrets.MONGO_URL }}  # Access secret using ${{ secrets.NAME }}
+      MONGO_URL: mongodb+srv://${{ secrets.MONGO_URL }}  # Access secret using ${{ secrets.NAME }}
     runs-on: ubuntu-latest
 
     strategy:
@@ -34,7 +34,7 @@ jobs:
 
       - name: Run Tests
         env:  # Define environment variables for tests
-          MONGO_URL: mongodb://${{ secrets.MONGO_URL }}
+          MONGO_URL: mongodb+srv://${{ secrets.MONGO_URL }}
         run: npm run test  # Run tests using the MONGO_URL secret
 
 
