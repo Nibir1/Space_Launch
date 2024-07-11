@@ -34,5 +34,5 @@ jobs:
 
       - env: # Define environment variables for tests
           MONGO_URL: ${{ secrets.MONGO_URL }}
-        run: npm test # Run tests using the MONGO_URL secret
+        run: npm run test # Run tests using the MONGO_URL secret
 
