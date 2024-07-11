@@ -11,7 +11,7 @@ describe("Launches API", () => {
 
   afterAll(async () => {
     await mongoDisconnect();
-  },80000);
+  }, 80000);
 
   describe("Test GET /launches", () => {
     test("It should respond with 200 success", async () => {
