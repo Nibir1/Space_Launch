@@ -7,11 +7,11 @@ describe("Launches API", () => {
   beforeAll(async () => {
     await mongoConnect();
     await loadPlanetsData();
-  }, 10000);
+  }, 80000);
 
   afterAll(async () => {
     await mongoDisconnect();
-  });
+  },80000);
 
   describe("Test GET /launches", () => {
     test("It should respond with 200 success", async () => {
