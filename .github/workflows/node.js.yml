@@ -19,7 +19,9 @@ jobs:
     strategy:
       matrix:
         node-version: [20.x]  # Test with a wider range
-
+    permissions:
+      contents: read
+      issues: write
     steps:
       - uses: actions/checkout@v4  # Checkout code from the repository
       - name: Use Node.js ${{ matrix.node-version }}
