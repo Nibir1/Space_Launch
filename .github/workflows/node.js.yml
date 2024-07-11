@@ -31,7 +31,6 @@ jobs:
       - run: npm install  # Install project dependencies
 
       - run: npm run build --prefix client  # Build client-side code (if applicable)
-        if: -f 'client/package.json'  # Only run if client/package.json exists
 
       - name: Run Tests
         env:  # Define environment variables for tests
