@@ -8,6 +8,7 @@
     "preinstall": "npm install npm-run-all --save-dev",
     "install": "npm run install-server",
     "postinstall": "npm run install-client",
+    "watch-server": "npm run watch --prefix server",
     "server": "npm run start --prefix server",
     "client": "npm run start --prefix client",
     "start": "npm-run-all --parallel server client",
