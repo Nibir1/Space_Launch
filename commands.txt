@@ -1,4 +1,18 @@
---- docker build,run,push ---
+--- docker build,run,push to DockerHub ---
 docker build . -t nahasat/space_launch
 docker run -it -p 8000:8000 nahasat/space_launch
 docker push nahasat/space_launch
+
+--- chmod key modification on Windows ---
+icacls.exe key_name.pem /reset
+icacls.exe key_name.pem /grant:r "$($env:username):(r)"
+icacls.exe key_name.pem /inheritance:r
+
+--- EC2 server console commands ---
+sudo yum update -y
+sudo yum install docker
+sudo service docker start
+sudo usermod -a -G docker ec2-user [Allows ec2-user to use docker withoout sudo, apply then exit then restart]
+
+--- After Logging in Docker on EC2 Terminal ---
+docker run --restart=always -p 8000:8000 nahasat/space_launch
